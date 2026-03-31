@@ -97,7 +97,7 @@ def powm(a, n, m):
         if(n%2==1):
            res = res * a % m
         a = a * a % m
-    n//=2
+        n//=2
     return res
 
 def encrypt(pk: tp.Tuple[int, int], plaintext: str) -> tp.List[int]:
@@ -105,7 +105,7 @@ def encrypt(pk: tp.Tuple[int, int], plaintext: str) -> tp.List[int]:
     key, n = pk
     # Convert each letter in the plaintext to numbers based on
     # the character using a^b mod m
-    cipher = [(ord(char) ** key) % n for char in plaintext]
+    cipher = [pow(char, n, m)  for char in plaintext]
     # Return the array of bytes
     return cipher
 
