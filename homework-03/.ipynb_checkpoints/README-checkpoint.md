@@ -1,0 +1,1 @@
+(https://contest.yandex.ru/contest/78264/enter/?retPage=standings Ссылка на Яндекс.Контест)
